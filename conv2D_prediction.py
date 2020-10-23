@@ -762,7 +762,7 @@ import logging
 from pathlib import Path
 from timeit import default_timer as timer
 
-NUM_LOOPS = 100
+NUM_LOOPS = 75
 def run_inference(num_observations:int = 1000):
     """Run xgboost for specified number of observations"""
     # Load data
@@ -783,7 +783,7 @@ def run_inference(num_observations:int = 1000):
         total_time = end_time - start_time
         run_times.append(total_time*10e3)
 
-        inference_time = total_time*(10e6)/num_rows
+        inference_time = total_time*(10e3)/num_rows
         inference_times.append(inference_time)
 
     print(num_observations, ", ", calculate_stats(inference_times))
