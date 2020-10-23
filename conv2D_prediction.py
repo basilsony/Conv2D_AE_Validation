@@ -762,7 +762,7 @@ import logging
 from pathlib import Path
 from timeit import default_timer as timer
 
-NUM_LOOPS = 75
+NUM_LOOPS = 100
 def run_inference(num_observations:int = 1000):
     """Run xgboost for specified number of observations"""
     # Load data
@@ -795,7 +795,7 @@ if __name__=='__main__':
     ob_ct = 1  # Start with a single observation
     logging.info(STATS)
     temp_df = pd.DataFrame()
-    while ob_ct <= 100000:
+    while ob_ct <= 10000:
         temp = run_inference(ob_ct)
         temp["No_of_Observation"] = ob_ct
         temp_df = temp_df.append(temp)
