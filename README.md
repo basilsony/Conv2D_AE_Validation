@@ -1,3 +1,6 @@
-Conv2D_AE_Validation
+Conv2d AE-Validation
+Dataset obtained from :https://github.com/MIMII-hitachi/mimii_baseline
 
-Directly use the run.sh file to run the benchmark.
+Steps to Run:
+Run the run.sh file directly
+UnComment the tensorflow GPU installation instead of normal Tensor Flow in cae running the test on GPU Instance
